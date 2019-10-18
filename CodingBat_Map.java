@@ -25,3 +25,17 @@ public Map<String, Integer> wordLen(String[] strings) {
 }
 
 //-------------------------------------------------------------
+
+//Map-2 > pairs
+//Given an array of non-empty strings, create and return a Map<String, String> as follows:
+//for each string add its first character as a key with its last character as the value.
+
+public Map<String, String> pairs(String[] strings) {
+  Map<String,String> map = new HashMap<String,String>();
+  for(String s: strings){
+    String c = s.substring(0,1);
+    String c1 = s.substring(s.length()-1,s.length());
+    map.put(c,c1);
+  }
+  return map;
+}
